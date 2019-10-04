@@ -1,0 +1,94 @@
+- platform: mqtt
+  schema: json
+  name: Dining Area
+  command_topic: "/rv/lights/dining/set"
+  state_topic: "/rv/lights/dining"
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: Bathroom
+  command_topic: "/rv/lights/bathroom/set"
+  state_topic: "/rv/lights/bathroom"
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: Office Area
+  command_topic: "/rv/lights/office/set"
+  state_topic: "/rv/lights/office"
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: Living Room One
+  command_topic: "/rv/lights/livingroom_1/set"
+  state_topic: "/rv/lights/livingroom_1"
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: Living Room Two
+  command_topic: "/rv/lights/livingroom_2/set"
+  state_topic: "/rv/lights/livingroom_2"
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: Bedroom
+  command_topic: "/rv/lights/bedroom/set"
+  state_topic: "/rv/lights/bedroom"
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: Kitchen Sink
+  command_topic: "/rv/lights/kitchen_1/set"
+  state_topic: "/rv/lights/kitchen_1"
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: Kitchen General
+  command_topic: "/rv/lights/kitchen_2/set"
+  state_topic: "/rv/lights/kitchen_2"
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: Kitchen Stovetop
+  command_topic: "/rv/lights/kitchen_3/set"
+  state_topic: "/rv/lights/kitchen_3"
+  brightness: true
+  rgb: true
+
+- platform: mqtt
+  schema: json
+  name: Kitchen Oven
+  command_topic: "/rv/lights/kitchen_4/set"
+  state_topic: "/rv/lights/kitchen_4"
+  brightness: true
+  rgb: true
+
+- platform: group
+  name: Kitchen Lights
+  entities:
+    - light.kitchen_oven
+    - light.kitchen_stovetop
+    - light.kitchen_general
+    - light.kitchen_sink
+
+- platform: group
+  name: Living Room
+  entities:
+    - light.living_room_one
+    - light.living_room_two
+

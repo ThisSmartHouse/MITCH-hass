@@ -1,0 +1,7 @@
+- platform: mqtt
+  schema: json
+  name: test_light
+  command_topic: "/rv/lights/test/set"
+  state_topic: "/rv/lights/test"
+  brightness: true
+  rgb: true
