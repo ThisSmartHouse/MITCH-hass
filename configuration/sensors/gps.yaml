@@ -1,0 +1,31 @@
+- platform: mqtt
+  name: Latitude
+  state_topic : "/rv/gps"
+  value_template: "{{ value_json.latitude }}"
+
+- platform: mqtt
+  name: Longitude
+  state_topic: "/rv/gps"
+  value_template: "{{ value_json.longitude }}"
+
+- platform: mqtt
+  name: Elevation
+  state_topic: "/rv/gps"
+  value_template: "{{ value_json.el }}"
+
+- platform: mqtt
+  name: Speed
+  unit_of_measurement: "Km/hr"
+  state_topic: "/rv/gps"
+  value_template: "{{ value_json.speed }}"
+
+- platform: mqtt
+  name: Total GPS Satalites
+  state_topic: "/rv/gps"
+  value_template: "{{ value_json.sat_found }}"
+
+- platform: mqtt
+  name: Used GPS Satalites
+  state_topic: "/rv/gps"
+  value_template: "{{ value_json.sat_used }}"
+

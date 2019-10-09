@@ -1,1 +1,47 @@
-[]
+- id: '1570326708119'
+  alias: Update Location from GPS
+  trigger:
+  - entity_id: sensor.latitude
+    platform: state
+  - entity_id: sensor.longitude
+    platform: state
+  condition: []
+  action:
+  - service: homeassistant.set_location
+    data_template:
+      latitude: states.sensor.latitude
+      longitude: states.sensor.longitude
+      elevation: states.sensor.elevation
+- id: '1570431934403'
+  alias: Reboot From MQTT
+  trigger:
+  - payload: reboot
+    platform: mqtt
+    topic: /rv/system
+  condition: []
+  action:
+  - service: shell_command.reboot
+- id: '1570507367364'
+  alias: Turn on Relays at Start
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      entity_id: switch.relay_one
+    service: switch.turn_on
+  - data:
+      entity_id: switch.relay_two
+    service: switch.turn_on
+- id: '1570605235878'
+  alias: Toggle Relays on HM
+  trigger:
+  - entity_id: sensor.keypad
+    platform: state
+    to: HM
+  condition: []
+  action:
+  - data:
+      entity_id: switch.relay_one
+    service: switch.toggle

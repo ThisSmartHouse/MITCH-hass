@@ -1,0 +1,1 @@
+reboot: '/usr/bin/sudo /sbin/shutdown -r +1'

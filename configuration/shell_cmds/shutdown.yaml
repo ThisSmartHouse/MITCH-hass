@@ -1,0 +1,1 @@
+shutdown: '/usr/bin/sudo /sbin/shutdown -h +1'

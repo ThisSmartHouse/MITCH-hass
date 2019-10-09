@@ -1,0 +1,3 @@
+- platform: mqtt_json
+  devices:
+    rv: /rv/gps:wq

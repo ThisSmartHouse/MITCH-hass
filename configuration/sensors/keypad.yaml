@@ -1,0 +1,5 @@
+- platform: mqtt
+  state_topic: "/rv/keypad/1"
+  name: Keypad
+  icon: mdi:keyboard
+  expire_after: 1

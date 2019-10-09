@@ -1,0 +1,4 @@
+shutdown:
+  alias: 'Shutdown'
+  sequence:
+    - service: shell_command.shutdoown

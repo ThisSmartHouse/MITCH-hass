@@ -1,0 +1,7 @@
+- platform: rpi_gpio
+  invert_logic: true
+  ports:
+    17 : Relay Four
+    27 : Relay Three
+    22 : Relay Two
+    23 : Relay One
