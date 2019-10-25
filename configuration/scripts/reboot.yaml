@@ -1,0 +1,4 @@
+reboot:
+  alias: 'Reboot M.I.T.C.H'
+  sequence:
+    - service: shell_command.reboot
